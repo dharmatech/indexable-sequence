@@ -63,3 +63,12 @@ Libraries are provided for the following data types:
     string
     f64-vector  (based on R6RS bytevectors)
     f32-vector  (based on R6RS bytevectors)
+
+SETUP
+
+    $ cd ~/scheme # Where '~/scheme' is the path to your Scheme libraries
+    $ git clone git://github.com/dharmatech/indexable-sequence.git
+
+To run the tests:
+
+    $ scheme --script ~/scheme/indexable-sequence/test-vector.sps
