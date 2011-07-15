@@ -1,0 +1,65 @@
+
+An indexable sequence is one which supports the following operations:
+
+    size seq       Get the length
+    ref  i         Get the element at i
+    put! i val     Set the element at i
+    new-of-size n  Make a new sequence of size n
+
+'define-indexable-sequence-procedures', when given these procedures
+for a particular data type, will generate the following procedures:
+
+    fold-left  seq val proc
+    fold-right seq val proc
+    for-each seq proc
+    for-each-with-index seq proc
+    copy seq
+    map! seq proc
+    map  seq proc
+    subseq seq start end
+    take seq n
+    drop seq n
+    filter-to-reverse-list seq proc
+    filter seq proc
+    index seq proc
+    find seq proc
+    swap! seq i j
+    reverse! seq
+    reverse seq
+
+The procedures are defined using names based on the data type. For
+example, the following expression:
+
+    (define-indexable-sequence-procedures
+      vector
+      vector-length
+      vector-ref
+      vector-set!
+      make-vector)
+
+will generate the following procedures:
+
+    vector-fold-left
+    vector-fold-right
+    vector-for-each
+    vector-for-each-with-index
+    vector-copy
+    vector-map!
+    vector-map
+    vector-subseq
+    vector-take
+    vector-drop
+    vector-filter-to-reverse-list
+    vector-filter
+    vector-index
+    vector-find
+    vector-swap!
+    vector-reverse!
+    vector-reverse
+
+Libraries are provided for the following data types:
+
+    vector
+    string
+    f64-vector  (based on R6RS bytevectors)
+    f32-vector  (based on R6RS bytevectors)
