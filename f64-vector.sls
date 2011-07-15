@@ -24,7 +24,7 @@
           f64-vector-reverse)
 
   (import (rnrs)
-          (indexable-sequence define-indexable-sequence-procedures))
+          (indexable-sequence define-indexable-sequence-operations))
 
   (define (make-f64-vector n)
     (make-bytevector (* 8 n)))
@@ -46,7 +46,7 @@
                (f64-vector-set! bv i (car lst))
                (loop (+ i 1) (cdr lst)))))))
 
-  (define-indexable-sequence-procedures
+  (define-indexable-sequence-operations
     f64-vector
     f64-vector-length
     f64-vector-ref

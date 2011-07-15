@@ -22,9 +22,9 @@
   (import (except (rnrs)
                   vector-map
                   vector-for-each)
-          (indexable-sequence define-indexable-sequence-procedures))
+          (indexable-sequence define-indexable-sequence-operations))
 
-  (define-indexable-sequence-procedures
+  (define-indexable-sequence-operations
     vector
     vector-length
     vector-ref

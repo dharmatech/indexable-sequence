@@ -6,16 +6,16 @@ An indexable sequence is one which supports the following operations:
     put! i val     Set the element at i
     new-of-size n  Make a new sequence of size n
 
-'define-indexable-sequence-procedures', when given these procedures
-for a particular data type, will generate the following procedures:
+'define-indexable-sequence-operations', when given these procedures
+for a particular data type, will generate the following procedures and macros:
 
-    fold-left  seq val proc
-    fold-right seq val proc
-    for-each seq proc
-    for-each-with-index seq proc
+    fold-left  proc val seq ...		MACRO
+    fold-right proc val seq ...		MACRO
+    for-each   proc seq ...		MACRO
+    for-each-with-index proc seq ...	MACRO
     copy seq
-    map! seq proc
-    map  seq proc
+    map! proc seq ...			MACRO
+    map  proc seq ...			MACRO
     subseq seq start end
     take seq n
     drop seq n
@@ -27,17 +27,17 @@ for a particular data type, will generate the following procedures:
     reverse! seq
     reverse seq
 
-The procedures are defined using names based on the data type. For
+The operations are defined using names based on the data type. For
 example, the following expression:
 
-    (define-indexable-sequence-procedures
+    (define-indexable-sequence-operations
       vector
       vector-length
       vector-ref
       vector-set!
       make-vector)
 
-will generate the following procedures:
+will generate the following:
 
     vector-fold-left
     vector-fold-right

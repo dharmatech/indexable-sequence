@@ -26,7 +26,7 @@
           f32-vector-reverse)
 
   (import (rnrs)
-          (indexable-sequence define-indexable-sequence-procedures))
+          (indexable-sequence define-indexable-sequence-operations))
 
   (define (make-f32-vector n)
     (make-bytevector (* 4 n)))
@@ -48,7 +48,7 @@
                (f32-vector-set! bv i (car lst))
                (loop (+ i 1) (cdr lst)))))))
 
-  (define-indexable-sequence-procedures
+  (define-indexable-sequence-operations
     f32-vector
     f32-vector-length
     f32-vector-ref

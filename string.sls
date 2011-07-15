@@ -23,9 +23,9 @@
                   string-for-each
                   string-copy)
           (rnrs mutable-strings)
-          (indexable-sequence define-indexable-sequence-procedures))
+          (indexable-sequence define-indexable-sequence-operations))
 
-  (define-indexable-sequence-procedures
+  (define-indexable-sequence-operations
     string
     string-length
     string-ref

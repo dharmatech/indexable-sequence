@@ -1,7 +1,7 @@
 
-(library (indexable-sequence define-indexable-sequence-procedures)
+(library (indexable-sequence define-indexable-sequence-operations)
   
-  (export define-indexable-sequence-procedures)
+  (export define-indexable-sequence-operations)
   
   (import (rnrs)
           (rename (rnrs)
@@ -29,7 +29,7 @@
 
   ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  (define-syntax define-indexable-sequence-procedures
+  (define-syntax define-indexable-sequence-operations
 
     (lambda (stx)
 
