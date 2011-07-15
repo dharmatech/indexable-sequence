@@ -1,3 +1,5 @@
+;; Copyright (c) 2011 Eduardo Cavazos.
+;; See LICENSE for terms and conditions of use.
 
 (library (indexable-sequence define-indexable-sequence-operations)
   
