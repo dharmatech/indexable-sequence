@@ -72,3 +72,5 @@ SETUP
 To run the tests:
 
     $ scheme --script ~/scheme/indexable-sequence/test-vector.sps
+
+The tests pass in Chez, Ikarus, Ypsilon, and Mosh.
