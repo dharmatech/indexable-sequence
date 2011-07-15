@@ -14,7 +14,7 @@ for a particular data type, will generate the following procedures and macros:
     for-each   proc seq ...		MACRO
     for-each-with-index proc seq ...	MACRO
     copy seq
-    map! proc seq ...			MACRO
+    map! proc seq
     map  proc seq ...			MACRO
     subseq seq start end
     take seq n
