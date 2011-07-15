@@ -1,5 +1,7 @@
 
-(import (rnrs)
+(import (except (rnrs)
+                vector-map
+                vector-for-each)
         (indexable-sequence vector))
 
 (assert
@@ -102,7 +104,7 @@
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(let ((a '#(10 20 30)))
+(let ((a (vector 10 20 30)))
   (let ((b (vector-copy a)))
     (assert (equal? a b))
     (vector-set! a 0 100)
