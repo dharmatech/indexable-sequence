@@ -115,17 +115,17 @@
 
 (assert
  (equal?
-  (let ((v (vector 1 4 9)))
+  (let ((v (vector 1.0 4.0 9.0)))
     (vector-map! sqrt v)
     v)
-  '#(1 2 3)))
+  '#(1.0 2.0 3.0)))
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (assert
  (equal?
-  (vector-map sqrt '#(4 9 16))
-  '#(2 3 4)))
+  (vector-map sqrt '#(4.0 9.0 16.0))
+  '#(2.0 3.0 4.0)))
 
 (assert
  (equal?
